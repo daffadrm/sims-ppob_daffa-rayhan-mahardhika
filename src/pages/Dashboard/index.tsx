@@ -183,7 +183,7 @@ const DashboardPage = () => {
                 {services?.map((item, index) => (
                   <div
                     key={index}
-                    className="flex flex-col items-center justify-center space-y-1 hover:scale-105 transition"
+                    className="flex flex-col items-center justify-center space-y-1 hover:scale-105 transition cursor-pointer"
                     onClick={() => {
                       dispatch(setSelectedService(item));
                     }}
