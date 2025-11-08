@@ -8,6 +8,7 @@ interface ConfirmationModalProps {
   logo?: string;
   loading: boolean;
   type?: string;
+  label: string;
 }
 
 const ConfirmationModal: React.FC<ConfirmationModalProps> = ({
@@ -18,6 +19,7 @@ const ConfirmationModal: React.FC<ConfirmationModalProps> = ({
   logo,
   loading,
   type,
+  label,
 }) => {
   if (!open) return null;
 
@@ -29,10 +31,10 @@ const ConfirmationModal: React.FC<ConfirmationModalProps> = ({
             <img src={logo} alt="Logo" className="w-8 h-8" />
           </div>
         )}
-        <h3 className="text-sm mb-3">Apakah yakin untuk Top Up sebesar</h3>
+        <h3 className="text-sm mb-3">{label}</h3>
         <p className="mb-5">
           <span className="font-bold">
-            Rp{amount?.toLocaleString("id-ID")} ?
+            Rp {amount?.toLocaleString("id-ID")} ?
           </span>
         </p>
         <div className="flex flex-col justify-center gap-2">

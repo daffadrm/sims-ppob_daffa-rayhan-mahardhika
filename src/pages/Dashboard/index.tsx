@@ -153,6 +153,7 @@ const DashboardPage = () => {
                 onCancel={() => setShowConfirm(false)}
                 loading={loadingTransaction}
                 type="transaction"
+                label={`Beli ${selectedService?.service_name} senilai`}
               />
             )}
 

@@ -147,6 +147,7 @@ const TopUpPage = () => {
               onConfirm={handleConfirm}
               onCancel={() => setShowConfirm(false)}
               loading={loadingTopup}
+              label="Anda yakin untuk Top Up sebesar"
             />
           )}
 
