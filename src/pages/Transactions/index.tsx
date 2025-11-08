@@ -70,6 +70,11 @@ const TransactionPage = () => {
             <Typography variant="body2">{tx?.description}</Typography>
           </Box>
         ))}
+        {!transactionsHistory?.length && (
+          <div className="flex justify-center">
+            Maaf tidak ada history transaksi hari ini
+          </div>
+        )}
       </Box>
       {moreHistory && (
         <Box display="flex" justifyContent="center" mt={3}>

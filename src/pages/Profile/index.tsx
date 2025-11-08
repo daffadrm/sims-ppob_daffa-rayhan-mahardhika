@@ -196,7 +196,7 @@ const ProfilePage = () => {
                 </Button>
               </label>
             </Box>
-            <Typography variant="h6" sx={{ mt: 2 }}>
+            <Typography variant="h6" fontWeight="bold" sx={{ mt: 2 }}>
               {profiles?.first_name + " " + profiles?.last_name}
             </Typography>
           </Box>
@@ -218,7 +218,7 @@ const ProfilePage = () => {
                 <TextField
                   fullWidth
                   variant="outlined"
-                  disabled={!isEditing}
+                  disabled
                   {...register("email")}
                   error={!!errors.email}
                   helperText={errors.email?.message}
@@ -292,6 +292,7 @@ const ProfilePage = () => {
                       <CircularProgress size={20} color="inherit" />
                     ) : null
                   }
+                  sx={{ textTransform: "none" }}
                 >
                   Simpan
                 </Button>
@@ -305,6 +306,7 @@ const ProfilePage = () => {
                 variant="outlined"
                 color="primary"
                 onClick={toggleEdit}
+                sx={{ textTransform: "none" }}
               >
                 Edit Profil
               </Button>
@@ -313,6 +315,7 @@ const ProfilePage = () => {
                 variant="contained"
                 color="primary"
                 onClick={handleLogout}
+                sx={{ textTransform: "none" }}
               >
                 Logout
               </Button>

@@ -139,7 +139,7 @@ export default function Login() {
               variant="contained"
               color="primary"
               fullWidth
-              sx={{ mt: 2 }}
+              sx={{ mt: 2, textTransform: "none" }}
               disabled={loading}
             >
               {loading ? "Loading..." : "Masuk"}
