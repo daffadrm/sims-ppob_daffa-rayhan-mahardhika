@@ -90,7 +90,7 @@ export default function InfoProfile() {
             </>
           )}
           <div className="mt-5 text-sm flex row gap-2">
-            Lihat Saldo
+            {showSaldo ? "Tutup Saldo" : "Lihat Saldo"}
             <div
               onClick={() => setShowSaldo((prev) => !prev)}
               className="text-white hover:text-gray-200 cursor-pointer"
