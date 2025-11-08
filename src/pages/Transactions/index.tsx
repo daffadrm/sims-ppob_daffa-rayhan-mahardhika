@@ -5,6 +5,7 @@ import moment from "moment";
 import { useDispatch, useSelector } from "react-redux";
 
 import InfoProfile from "@/components/InfoProfile";
+import { resetTransactions } from "@/features/transaction/transactionSlice";
 import { fetchTransactionsHistory } from "@/features/transaction/transactionThunk";
 import { showAlert } from "@/store/alertStore";
 import { AppDispatch, RootState } from "@/store/store";
@@ -30,6 +31,7 @@ const TransactionPage = () => {
   }, [dispatch, globalError]);
 
   useEffect(() => {
+    dispatch(resetTransactions());
     dispatch(fetchTransactionsHistory({ offset: 0, limit }));
   }, [dispatch, limit]);
 
